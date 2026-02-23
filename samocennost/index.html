@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Перезагрузка самооценки — Терапевтическая группа Екатерины Боровицкой</title>
+  <title>Перезагрузка самооценки — Екатерина Боровицкая</title>
   
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -40,12 +40,6 @@
       opacity: 0.02; pointer-events: none; z-index: 50;
     }
 
-    .ambient-glow {
-      position: fixed; inset: 0;
-      background: radial-gradient(circle at 50% 50%, rgba(214, 211, 209, 0.15), transparent 70%);
-      pointer-events: none; z-index: -1;
-    }
-
     .reveal { opacity: 0; transform: translateY(20px); transition: all 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
     .reveal.active { opacity: 1; transform: translateY(0); }
 
@@ -54,28 +48,28 @@
       padding-left: clamp(22px, 5.2vw, 72px); padding-right: clamp(22px, 5.2vw, 72px);
     }
 
-    .group-card {
-      background: white; border: 1px solid #e7e5e4;
-      padding: 2rem; height: 100%;
-    }
-
-    .btn-primary {
+    .btn-main {
       display: inline-flex; align-items: center; justify-content: center;
       text-transform: uppercase; font-size: 10px; letter-spacing: 0.22em;
       border-radius: 9999px; padding: 1.25rem 2.5rem;
       background-color: #1c1917; color: #fafaf9; width: 100%;
+      font-weight: 600;
     }
-    @media (min-width: 768px) { .btn-primary { width: auto; } }
-    .btn-primary:hover { background-color: #44403c; transform: translateY(-2px); }
+    @media (min-width: 768px) { .btn-main { width: auto; } }
+    .btn-main:hover { background-color: #44403c; transform: translateY(-2px); }
+
+    .group-card { background: white; border: 1px solid #e7e5e4; padding: 2rem; height: 100%; }
+
+    details summary::-webkit-details-marker { display: none; }
+    details[open] summary svg { transform: rotate(180deg); }
   </style>
 </head>
 <body class="text-stone-900 antialiased font-sans">
-  <div class="ambient-glow"></div>
 
   <header class="fixed top-0 left-0 right-0 z-[60] bg-stone-50/80 backdrop-blur-md border-b border-stone-200/50">
     <div class="site-container h-14 flex items-center justify-between">
-      <a href="#" class="font-serif text-sm md:text-lg tracking-tight">Екатерина Боровицкая</a>
-      <a target="_blank" href="https://t.me/Katerina_Boroviskaya" class="text-[9px] uppercase tracking-[0.2em] text-stone-500 hover:text-stone-900">Записаться</a>
+      <a href="https://e-borovitskaya.ru/" class="font-serif text-lg tracking-tight hover:opacity-60 transition-opacity">Екатерина Боровицкая</a>
+      <a target="_blank" href="https://t.me/Katerina_Boroviskaya?text=Здравствуйте!%20Я%20по%20поводу%20терапевтической%20группы" class="text-[10px] uppercase tracking-[0.2em] text-stone-400 hover:text-stone-900">Записаться</a>
     </div>
   </header>
 
@@ -86,15 +80,15 @@
           <span class="block text-stone-400 text-[10px] uppercase tracking-[0.32em] mb-6">Камерная терапевтическая группа (4 человека)</span>
           <h1 class="font-serif text-3xl md:text-5xl lg:text-6xl leading-[1.15] text-stone-800 mb-8">
             Перезагрузка самооценки: <br>
-            <span class="text-stone-400 italic font-light">от жёсткой оценки к устойчивой опоре</span>
+            <span class="text-stone-400 italic font-light">от самокритики к внутренней опоре</span>
           </h1>
           <p class="text-stone-600 text-lg md:text-xl font-light mb-10 leading-relaxed max-w-2xl">
-            8 встреч бережной, но глубокой работы с самооценкой и самоценностью.
+            8 встреч бережной, но глубокой работы с самооценкой и самоценностью
           </p>
-          <div class="border-l-2 border-stone-200 pl-6 mb-12 italic text-stone-500 font-light">
+          <div class="border-l-2 border-stone-200 pl-6 mb-12 italic text-stone-500 font-light leading-relaxed">
             Если вы устали жить с ощущением «я недостаточно хорош(а)», если любое достижение быстро обесценивается, если страх ошибки останавливает сильнее, чем желание двигаться — возможно, пришло время не усиливать контроль над собой, а научиться выстраивать внутреннюю поддержку.
           </div>
-          <a target="_blank" href="https://t.me/Katerina_Boroviskaya" class="btn-primary">Записаться на ознакомительную встречу</a>
+          <a target="_blank" href="https://t.me/Katerina_Boroviskaya?text=Здравствуйте!%20Я%20по%20поводу%20терапевтической%20группы" class="btn-main">Записаться на ознакомительную встречу</a>
         </div>
       </div>
     </section>
@@ -122,11 +116,11 @@
     <section class="py-24">
       <div class="site-container">
         <div class="reveal max-w-3xl mx-auto text-center mb-20">
-          <h2 class="font-serif text-3xl mb-8">Что это за формат</h2>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
-            <div class="p-4 border border-stone-200 text-stone-400 text-sm uppercase tracking-widest">Не лекция</div>
-            <div class="p-4 border border-stone-200 text-stone-400 text-sm uppercase tracking-widest">Не тренинг</div>
-            <div class="p-4 border border-stone-200 text-stone-400 text-sm uppercase tracking-widest">Не просто разговор</div>
+          <h2 class="font-serif text-3xl mb-8 text-stone-800">Что это за формат</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10 text-stone-400 text-[10px] uppercase tracking-widest font-bold">
+            <div class="p-4 border border-stone-200">Не лекция</div>
+            <div class="p-4 border border-stone-200">Не тренинг</div>
+            <div class="p-4 border border-stone-200">Не просто разговор</div>
           </div>
           <p class="text-stone-600 font-light leading-relaxed text-lg">
             Это практическая групповая терапия в модальности Транзактного анализа — структурированный и понятный подход к работе с внутренним критиком, жизненными сценариями и самоотношением. 
@@ -136,22 +130,22 @@
         </div>
 
         <div class="reveal">
-          <h3 class="font-serif text-2xl mb-12 text-center">Почему именно группа</h3>
+          <h3 class="font-serif text-2xl mb-12 text-center text-stone-800 italic">Почему именно группа</h3>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div class="group-card">
-              <h4 class="font-serif text-xl mb-4 italic">Группа как зеркало</h4>
+              <h4 class="font-serif text-xl mb-4 italic text-stone-800">Группа как зеркало</h4>
               <p class="text-stone-500 font-light text-sm leading-relaxed">Вы увидите свои модели мышления и поведения не только внутри себя, но и в безопасном взаимодействии с другими людьми.</p>
             </div>
             <div class="group-card">
-              <h4 class="font-serif text-xl mb-4 italic">Пространство для новой роли</h4>
-              <p class="text-stone-500 font-light text-sm leading-relaxed">Можно пробовать по-другому — выражать себя, давать и принимать поддержку, получать честную и доброжелательную обратную связь.</p>
+              <h4 class="font-serif text-xl mb-4 italic text-stone-800">Пространство для новой роли</h4>
+              <p class="text-stone-500 font-light text-sm leading-relaxed">Можно пробовать по‑другому — выражать себя, давать и принимать поддержку, получать честную и доброжелательную обратную связь.</p>
             </div>
             <div class="group-card">
-              <h4 class="font-serif text-xl mb-4 italic">Снижение стыда и изоляции</h4>
+              <h4 class="font-serif text-xl mb-4 italic text-stone-800">Снижение стыда и изоляции</h4>
               <p class="text-stone-500 font-light text-sm leading-relaxed">Осознание «я не один(одна) в этом» создаёт мощную опору для изменений.</p>
             </div>
             <div class="group-card">
-              <h4 class="font-serif text-xl mb-4 italic">Камерный формат</h4>
+              <h4 class="font-serif text-xl mb-4 italic text-stone-800">Камерный формат</h4>
               <p class="text-stone-500 font-light text-sm leading-relaxed">Всего 4 участника — это глубина индивидуальной работы с ресурсом групповой динамики и достаточным вниманием каждому.</p>
             </div>
           </div>
@@ -163,25 +157,25 @@
       <div class="site-container">
         <div class="reveal grid grid-cols-1 lg:grid-cols-12 gap-12">
           <div class="lg:col-span-5">
-            <h2 class="font-serif text-3xl">Как мы будем работать</h2>
-            <p class="text-stone-400 mt-4 font-light">За 8 встреч мы пройдем путь от осознания к навыку самоподдержки.</p>
+            <h2 class="font-serif text-3xl text-stone-800">Как мы будем работать</h2>
+            <p class="text-stone-400 mt-4 font-light italic">За 8 встреч мы:</p>
           </div>
-          <div class="lg:col-span-7 space-y-12">
+          <div class="lg:col-span-7 space-y-10">
             <div class="flex gap-8 items-start">
               <span class="text-stone-200 font-serif text-4xl">01</span>
-              <p class="text-stone-600 font-light text-lg">Познакомимся с вашим внутренним Критиком — и поймём, откуда он появился.</p>
+              <p class="text-stone-600 font-light text-lg leading-relaxed">Познакомимся с вашим внутренним Критиком — и поймём, откуда он появился.</p>
             </div>
             <div class="flex gap-8 items-start">
               <span class="text-stone-200 font-serif text-4xl">02</span>
-              <p class="text-stone-600 font-light text-lg">Разберём, какие жизненные сценарии стоят за самокритикой.</p>
+              <p class="text-stone-600 font-light text-lg leading-relaxed">Разберём, какие жизненные сценарии стоят за самокритикой.</p>
             </div>
             <div class="flex gap-8 items-start">
               <span class="text-stone-200 font-serif text-4xl">03</span>
-              <p class="text-stone-600 font-light text-lg">Будем развивать внутреннюю опору — Взрослого и Заботливого Родителя.</p>
+              <p class="text-stone-600 font-light text-lg leading-relaxed">Будем развивать внутреннюю опору — Взрослого и Заботливого Родителя.</p>
             </div>
             <div class="flex gap-8 items-start">
               <span class="text-stone-200 font-serif text-4xl">04</span>
-              <p class="text-stone-600 font-light text-lg">Научимся выстраивать внутренний диалог так, чтобы Критик перестал быть диктатором и стал одной из частей здоровой внутренней системы.</p>
+              <p class="text-stone-600 font-light text-lg leading-relaxed">Научимся выстраивать внутренний диалог так, чтобы Критик перестал быть диктатором и стал одной из частей здоровой внутренней системы.</p>
             </div>
             <p class="text-stone-400 italic pt-6 border-t border-stone-100 font-light">Работа будет сочетать обсуждение, упражнения, анализ реальных жизненных ситуаций и терапевтический процесс в группе.</p>
           </div>
@@ -192,7 +186,7 @@
     <section class="py-24 bg-stone-900 text-stone-50">
       <div class="site-container">
         <div class="reveal max-w-3xl">
-          <h2 class="font-serif text-3xl md:text-4xl mb-12">Что может измениться</h2>
+          <h2 class="font-serif text-3xl md:text-4xl mb-12 italic">Что может измениться</h2>
           <ul class="space-y-6 text-stone-300 font-light text-lg mb-12">
             <li class="flex gap-4"><span>•</span> Замечать и останавливать внутреннюю самокритику</li>
             <li class="flex gap-4"><span>•</span> Снижать зависимость от внешней оценки</li>
@@ -209,22 +203,103 @@
       <div class="site-container">
         <div class="reveal grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
-            <span class="text-[9px] uppercase tracking-widest text-stone-400 block mb-2">Формат</span>
+            <span class="text-[9px] uppercase tracking-widest text-stone-400 block mb-2 font-bold">Формат</span>
             <p class="text-stone-800 font-serif">Онлайн</p>
           </div>
           <div>
-            <span class="text-[9px] uppercase tracking-widest text-stone-400 block mb-2">График</span>
-            <p class="text-stone-800 font-serif">8 встреч по субботам</p>
+            <span class="text-[9px] uppercase tracking-widest text-stone-400 block mb-2 font-bold">График</span>
+            <p class="text-stone-800 font-serif">8 субботних встреч</p>
           </div>
           <div>
-            <span class="text-[9px] uppercase tracking-widest text-stone-400 block mb-2">Длительность</span>
-            <p class="text-stone-800 font-serif">2,5 часа</p>
+            <span class="text-[9px] uppercase tracking-widest text-stone-400 block mb-2 font-bold">Длительность</span>
+            <p class="text-stone-800 font-serif">2,5 часа каждая</p>
           </div>
           <div>
-            <span class="text-[9px] uppercase tracking-widest text-stone-400 block mb-2">Стоимость</span>
+            <span class="text-[9px] uppercase tracking-widest text-stone-400 block mb-2 font-bold">Стоимость</span>
             <p class="text-stone-800 font-serif">3000 ₽ / встреча</p>
-            <p class="text-stone-400 text-xs mt-1">24 000 ₽ за всю программу</p>
+            <p class="text-stone-400 text-xs mt-1 italic">24 000 ₽ за всю программу</p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24 bg-stone-50 border-t border-stone-100">
+      <div class="site-container">
+        <div class="reveal mb-16">
+          <h2 class="font-serif text-3xl md:text-4xl text-stone-900">Частые вопросы</h2>
+        </div>
+        
+        <div class="reveal max-w-3xl space-y-4">
+          <details class="group border-b border-stone-200 pb-4">
+            <summary class="flex justify-between items-center cursor-pointer list-none py-4">
+              <span class="font-serif text-lg text-stone-800 italic">«Мне страшно идти в группу. Это нормально?»</span>
+              <svg class="w-5 h-5 text-stone-400 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M19 9l-7 7-7-7"/></svg>
+            </summary>
+            <div class="text-stone-500 font-light leading-relaxed space-y-4 pt-2">
+              <p>Да. Большинство участников приходят с тревогой: «А вдруг я буду выглядеть глупо?», «А если меня будут оценивать?», «А если я не смогу говорить?».</p>
+              <p>В группе не требуется быть открытым с первой встречи. Каждый двигается в своём темпе. Без давления и без принуждения к откровенности.</p>
+            </div>
+          </details>
+
+          <details class="group border-b border-stone-200 pb-4">
+            <summary class="flex justify-between items-center cursor-pointer list-none py-4">
+              <span class="font-serif text-lg text-stone-800 italic">«Если я не смогу говорить о личном?»</span>
+              <svg class="w-5 h-5 text-stone-400 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M19 9l-7 7-7-7"/></svg>
+            </summary>
+            <div class="text-stone-500 font-light leading-relaxed pt-2">
+              <p>Вы сами регулируете глубину раскрытия. Терапия — это не обязанность рассказывать всё. Иногда участие, наблюдение и обратная связь уже дают важные изменения.</p>
+            </div>
+          </details>
+
+          <details class="group border-b border-stone-200 pb-4">
+            <summary class="flex justify-between items-center cursor-pointer list-none py-4">
+              <span class="font-serif text-lg text-stone-800 italic">«Чем группа отличается от индивидуальной терапии?»</span>
+              <svg class="w-5 h-5 text-stone-400 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M19 9l-7 7-7-7"/></svg>
+            </summary>
+            <div class="text-stone-500 font-light leading-relaxed pt-2 space-y-4">
+              <p>В индивидуальной работе вы исследуете себя в контакте с терапевтом. В группе добавляется живое взаимодействие с другими людьми — и именно в нём становятся видны привычные сценарии. Группа ускоряет осознания, потому что вы видите свои модели «в действии».</p>
+            </div>
+          </details>
+
+          <details class="group border-b border-stone-200 pb-4">
+            <summary class="flex justify-between items-center cursor-pointer list-none py-4">
+              <span class="font-serif text-lg text-stone-800 italic">«Что если я пропущу встречу?»</span>
+              <svg class="w-5 h-5 text-stone-400 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M19 9l-7 7-7-7"/></svg>
+            </summary>
+            <div class="text-stone-500 font-light leading-relaxed pt-2">
+              <p>Группа предполагает регулярность. Если вы понимаете, что не готовы быть включёнными на протяжении всех 8 встреч — возможно, формат лучше обсудить отдельно.</p>
+            </div>
+          </details>
+
+          <details class="group border-b border-stone-200 pb-4">
+            <summary class="flex justify-between items-center cursor-pointer list-none py-4">
+              <span class="font-serif text-lg text-stone-800 italic">«Это будет тяжело?»</span>
+              <svg class="w-5 h-5 text-stone-400 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M19 9l-7 7-7-7"/></svg>
+            </summary>
+            <div class="text-stone-500 font-light leading-relaxed pt-2">
+              <p>Работа может затрагивать важные и чувствительные темы. Но формат построен бережно. Глубина не означает давление.</p>
+            </div>
+          </details>
+
+          <details class="group border-b border-stone-200 pb-4">
+            <summary class="flex justify-between items-center cursor-pointer list-none py-4">
+              <span class="font-serif text-lg text-stone-800 italic">«Подойдёт ли мне, если я уже был(а) в терапии?»</span>
+              <svg class="w-5 h-5 text-stone-400 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M19 9l-7 7-7-7"/></svg>
+            </summary>
+            <div class="text-stone-500 font-light leading-relaxed pt-2">
+              <p>Да. Групповой формат даёт другой опыт — он не заменяет индивидуальную терапию, а дополняет её.</p>
+            </div>
+          </details>
+
+          <details class="group border-b border-stone-200 pb-4">
+            <summary class="flex justify-between items-center cursor-pointer list-none py-4">
+              <span class="font-serif text-lg text-stone-800 italic">«Как понять, что мне это подходит?»</span>
+              <svg class="w-5 h-5 text-stone-400 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M19 9l-7 7-7-7"/></svg>
+            </summary>
+            <div class="text-stone-500 font-light leading-relaxed pt-2">
+              <p>Именно для этого проводится 15-минутная ознакомительная встреча. На ней можно задать вопросы и почувствовать, откликается ли формат.</p>
+            </div>
+          </details>
         </div>
       </div>
     </section>
@@ -233,9 +308,9 @@
       <div class="site-container">
         <div class="reveal grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
           <div class="lg:col-span-4">
-            <h2 class="font-serif text-3xl mb-8">О ведущей</h2>
-            <div class="aspect-[3/4] bg-stone-100 overflow-hidden">
-               <img src="katerina.jpg" alt="Екатерина Боровицкая" class="w-full h-full object-cover grayscale-[0.3]">
+            <h2 class="font-serif text-3xl mb-8 text-stone-800">Обо мне</h2>
+            <div class="aspect-[3/4] bg-stone-100 overflow-hidden grayscale-[0.3]">
+               <img src="katerina.jpg" alt="Екатерина Боровицкая" class="w-full h-full object-cover">
             </div>
           </div>
           <div class="lg:col-span-8 space-y-8 text-stone-600 font-light leading-relaxed">
@@ -246,31 +321,41 @@
             <p>В терапии для меня важно не «исправить» человека, а создать безопасное и уважительное пространство, где можно постепенно замечать свои неосознанные сценарии и возвращать себе свободу выбора — в отношениях с собой и с другими людьми.</p>
             
             <div class="pt-8 border-t border-stone-200">
-              <h4 class="text-[10px] uppercase tracking-[0.2em] mb-4 font-bold">Образование и опыт</h4>
+              <h4 class="text-[10px] uppercase tracking-[0.2em] mb-4 font-bold text-stone-800">Образование и профессиональный путь:</h4>
               <ul class="text-sm space-y-3">
                 <li>• Базовое образование — психолог, преподаватель психологии (ЯрГУ им. П.Г. Демидова, 2014 г.)</li>
-                <li>• Специализация — Транзактный анализ (МИРТА)</li>
+                <li>• Специализация — Транзактный анализ в консультировании (МИРТА)</li>
                 <li>• Более 9 лет практики и свыше 2500 проведённых сессий</li>
                 <li>• Методы: арт-терапия, ДПДГ (EMDR), ACT, телесно-ориентированная терапия</li>
               </ul>
             </div>
+
+            <div class="pt-4">
+              <a href="https://e-borovitskaya.ru/" class="inline-flex items-center gap-3 text-[10px] uppercase tracking-[0.25em] font-bold text-stone-800 group/link border-b border-stone-200 hover:border-stone-900 pb-2 transition-all">
+                Подробнее обо мне можно почитать здесь
+                <svg class="group-hover/link:translate-x-1 transition-transform" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+
             <p class="italic text-stone-400 mt-8">Я верю, что глубокие изменения возможны только там, где есть стабильность, бережность и уважение к вашему темпу.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="cta" class="py-32 bg-stone-50 border-t border-stone-200">
-      <div class="site-container text-center">
+    <section class="py-32 bg-stone-900 text-stone-50">
+      <div class="site-container text-center text-stone-50">
         <div class="reveal max-w-2xl mx-auto">
-          <h2 class="font-serif text-3xl mb-8">Следующий шаг</h2>
-          <p class="text-stone-600 font-light mb-12 leading-relaxed">
-            Чтобы понять, подходит ли вам формат групповой работы, я приглашаю вас на бесплатную 15-минутную ознакомительную беседу. На ней мы сможем обсудить ваш запрос и определить, будет ли эта программа для вас полезной и безопасной.
+          <h2 class="font-serif text-3xl mb-8 italic">Следующий шаг</h2>
+          <p class="text-stone-400 font-light mb-12 leading-relaxed">
+            Чтобы понять, подходит ли вам формат групповой работы, я приглашаю вас на бесплатную 15‑минутную ознакомительную беседу. На ней мы сможем обсудить ваш запрос и определить, будет ли эта программа для вас полезной и безопасной.
           </p>
-          <p class="text-stone-400 text-[10px] uppercase tracking-widest mb-8">Количество мест ограничено — всего 4 участника</p>
+          <p class="text-[9px] uppercase tracking-widest text-stone-500 mb-8 font-bold">Количество мест ограничено — всего 4 участника</p>
           <div class="flex flex-col items-center gap-6">
-            <a target="_blank" href="https://t.me/Katerina_Boroviskaya" class="btn-primary">Записаться на ознакомительную встречу</a>
-            <p class="text-sm text-stone-400 font-light italic">Вы можете написать мне в личные сообщения или в Telegram.</p>
+            <a target="_blank" href="https://t.me/Katerina_Boroviskaya?text=Здравствуйте!%20Я%20по%20поводу%20терапевтической%20группы" class="btn-main !bg-stone-50 !text-stone-900">Записаться на встречу</a>
+            <p class="text-xs text-stone-500 font-light italic">Вы можете написать мне в личные сообщения или в Telegram.</p>
           </div>
         </div>
       </div>
@@ -279,7 +364,7 @@
 
   <footer class="py-12 border-t border-stone-100 text-center">
     <div class="site-container">
-      <p class="text-[10px] text-stone-400 uppercase tracking-widest">&copy; 2026 Екатерина Боровицкая · Психолог</p>
+      <p class="text-[10px] text-stone-400 uppercase tracking-[0.2em] font-bold">&copy; 2026 Екатерина Боровицкая</p>
     </div>
   </footer>
 
